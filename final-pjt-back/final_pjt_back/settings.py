@@ -171,11 +171,11 @@ CORS_ALLOWED_ORIGINS = [
 import os
 import environ
 
-env = environ.Env(DEBUG=(bool, True))
+# env = environ.Env(DEBUG=(bool, True))
 
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-API_KEY = env('API_KEY')
+# API_KEY = env('API_KEY')
 
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',

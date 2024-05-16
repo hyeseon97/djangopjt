@@ -26,7 +26,7 @@ DEPOSIT_BASE_URL = 'http://finlife.fss.or.kr/finlifeapi/'
 def save_deposit(request):
     URL = DEPOSIT_BASE_URL + 'depositProductsSearch.json'
     params = {
-        'auth': settings.API_KEY,
+        # 'auth': settings.API_KEY,
         'topFinGrpNo': '020000',
         'pageNo': 1
     }
