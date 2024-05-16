@@ -15,4 +15,4 @@ EXPOSE 8001
 
 # gunicorn 배포 명령어
 # CMD ["gunicorn", "--bind", "허용하는 IP:열어줄 포트", "project.wsgi:application"]
-CMD ["gunicorn", "--bind", "0.0.0.0:8001", "djangopjt.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "final_pjt_back.wsgi:application"]
