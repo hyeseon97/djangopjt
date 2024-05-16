@@ -4,7 +4,7 @@ import axios from 'axios'
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
-const API_URL = 'http://127.0.0.1:8000'
+const API_URL = 'http://13.124.154.154:8080'
 const createSessionStorageState = (options) => {
   const persistedState = createPersistedState({
     storage: {
