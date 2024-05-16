@@ -6,6 +6,8 @@ services:
       context: ./final-pjt-front # 프론트엔드 Dockerfile 위치
     ports:
       - "5173:5173" # 포트 매핑 설정
+    networks:
+      - hyeseon
 
   backend:
     build:
@@ -20,3 +22,9 @@ services:
 #      SPRING_DATASOURCE_USERNAME: ssafy
 #      SPRING_DATASOURCE_PASSWORD: ssafy
       CORS_ALLOWED_ORIGIN: http://13.124.154.154:5173
+    networks:
+      - hyeseon
+
+networks:
+  hyeseon:
+    external: true 
