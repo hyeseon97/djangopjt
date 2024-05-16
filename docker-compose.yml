@@ -1,9 +1,5 @@
 version: "3.8" # Docker Compose 파일 버전
 
-networks:
-  hyeseon:  # 네트워크 정의
-    driver: bridge
-
 services:
   frontend:
     build:
