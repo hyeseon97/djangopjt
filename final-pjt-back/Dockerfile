@@ -11,7 +11,7 @@ RUN pip install gunicorn  # gunicorn 설치
 COPY . .
 
 ## Run the application on the port 8080
-EXPOSE 8001
+EXPOSE 8080
 
 # gunicorn 배포 명령어
 # CMD ["gunicorn", "--bind", "허용하는 IP:열어줄 포트", "project.wsgi:application"]
