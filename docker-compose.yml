@@ -1,9 +1,14 @@
 version: "3.8" # Docker Compose 파일 버전
 
+networks:
+  hyeseon:  # 네트워크 정의
+    driver: bridge
+
 services:
   frontend:
     build:
       context: ./final-pjt-front # 프론트엔드 Dockerfile 위치
+    command: http-server -a 0.0.0.0 -p 5173 --cors
     ports:
       - "5173:5173" # 포트 매핑 설정
     networks:
