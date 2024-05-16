@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     getArticles() {
-      const API_URL = 'http://127.0.0.1:8000'
+      const API_URL = 'http://13.124.154.154:8080'
       const token = this.$store.state.token
       axios
         .get(`${API_URL}/articles/`, {

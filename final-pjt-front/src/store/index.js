@@ -105,7 +105,7 @@ export default new Vuex.Store({
 
         axios({
           method: 'post',
-          url: 'http://127.0.0.1:8000/accounts/signup/',
+          url: 'http://13.124.154.154:8080/accounts/signup/',
           data: {
             username, password1, password2, age, gender, salary, wealth, tendency
           }
@@ -131,7 +131,7 @@ export default new Vuex.Store({
         const password = payload.password
         axios({
           method: 'post',
-          url: 'http://127.0.0.1:8000/accounts/login/',
+          url: 'http://13.124.154.154:8080/accounts/login/',
           data: {
             username, password
           }
@@ -154,7 +154,7 @@ export default new Vuex.Store({
       
       axios({
         methods: 'get',
-        url: 'http://127.0.0.1:8000/accounts/user/',
+        url: 'http://13.124.154.154:8080/accounts/user/',
         headers: {
           Authorization: `Token ${token}`
         }

@@ -48,7 +48,7 @@
 
 <script>
 import axios from 'axios'
-const API_URL = 'http://127.0.0.1:8000'
+const API_URL = 'http://13.124.154.154:8080'
 export default {
     name: 'ArticleLike',
     props:{
