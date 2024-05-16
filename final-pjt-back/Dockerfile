@@ -1,18 +1,22 @@
-# ./Dockerfile 
-FROM python:3
-WORKDIR /usr/src/app
+# 베이스 이미지 설정
+FROM python:3.10-slim
 
-## Install packages
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-RUN pip install gunicorn  # gunicorn 설치
+# 작업 디렉토리 설정
+WORKDIR /app
 
-## Copy all src files
-COPY . .
+# 환경 변수 설정
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-## Run the application on the port 8080
-EXPOSE 8080
+# 의존성 파일 설치
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
-# gunicorn 배포 명령어
-# CMD ["gunicorn", "--bind", "허용하는 IP:열어줄 포트", "project.wsgi:application"]
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "final_pjt_back.wsgi:application"]
+# 프로젝트 파일 복사
+COPY . /app/
+
+# 포트 설정
+EXPOSE 8000
+
+# Django 앱 실행
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
