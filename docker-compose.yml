@@ -12,6 +12,7 @@ services:
       context: ./final-pjt-back # 백엔드 Dockerfile 위치
     ports:
       - "8080:8080" # 포트 매핑 설정
+    command: python manage.py runserver 0.0.0.0:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Docker 소켓 마운트
     environment:
