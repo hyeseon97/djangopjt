@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     async getDepositData() {
-      const response = await axios.get('http://127.0.0.1:8000/deposits/save/')
+      const response = await axios.get('http://13.124.154.154:8080/deposits/save/')
       this.$store.commit('GET_DEPOSIT_DATA', response.data)
       this.show = true
     },

@@ -33,7 +33,7 @@
 import axios from 'axios';
 import ArticleLike from '../components/ArticleLike.vue';
 import Comments from '../components/Comments.vue';
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'http://13.124.154.154:8080';
 
 export default {
   name: 'ArticleDetailView',
