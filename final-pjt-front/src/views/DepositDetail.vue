@@ -78,7 +78,7 @@ components: {
 },
 methods: {
     async getDepositData() {
-      const response = await axios.get(`http://127.0.0.1:8000/deposits/detail/${this.$route.params.bank_info}`)
+      const response = await axios.get(`http://13.124.154.154:8080/deposits/detail/${this.$route.params.bank_info}`)
       this.$store.commit('GET_CURRENT_DETAIL', response.data)
       console.log(this.$store.state.currentDetail)
       this.set_info()
@@ -89,7 +89,7 @@ methods: {
       this.deposit_detail_options = this.$store.state.currentDetail.deposit_detail_options
     },
     async signDeposit() {
-      const response = await axios.post(`http://127.0.0.1:8000/deposits/detail/${this.$route.params.bank_info}/${this.userInfo.pk}/`)
+      const response = await axios.post(`http://13.124.154.154:8080/deposits/detail/${this.$route.params.bank_info}/${this.userInfo.pk}/`)
       console.log(response)
       this.$store.commit('USERINFO',response.data)
       this.check()
