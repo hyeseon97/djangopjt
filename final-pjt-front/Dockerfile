@@ -26,4 +26,4 @@ WORKDIR /app
 COPY --from=build-stage /app/dist /app
 
 # 단계 11: Vue 프로젝트를 제공하기 위한 간단한 웹 서버 실행
-CMD ["npx", "http-server", "-p", "5173"]
+CMD ["npx", "http-server", "-p", "5173", "--cors"]
